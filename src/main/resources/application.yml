@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: url-shortener-service
+    version: 2.5.0
+
+server:
+  port: 8080
