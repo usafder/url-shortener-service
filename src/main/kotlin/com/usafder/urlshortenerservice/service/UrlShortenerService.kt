@@ -54,7 +54,7 @@ class UrlShortenerService(
     }
 
     private fun getActualUrlFrom(request: ShortUrlRequest) =
-        if (request.actualUrl.contains(HTTP)) request.actualUrl else "${HTTPS}://${request.actualUrl}"
+        if (request.actualUrl.startsWith(HTTP)) request.actualUrl else "${HTTPS}://${request.actualUrl}"
 
     private fun validateUrl(actualUrl: String) {
         val urlValidator = UrlValidator(arrayOf(HTTP, HTTPS))
